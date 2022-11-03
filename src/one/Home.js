@@ -10,6 +10,7 @@ function Home() {
         <h1 className='display-1 p-4'>Applikation</h1>
         <div className='container d-flex h-75'>
         <p>PLONGA BONGA</p>
+        <p>BINGEBONGA</p>
         <Link to='/item'>
             <img src={herr} class='img-thumbnail w-50'/>
           </Link>
