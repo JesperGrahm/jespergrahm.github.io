@@ -9,6 +9,7 @@ function Home() {
         <div className='container d-flex h-75'>
           <Navbar />
           <p>{getSubdomain()}</p>
+          <p>{window.location.hostname}</p>
         </div>
     </body>
   );
