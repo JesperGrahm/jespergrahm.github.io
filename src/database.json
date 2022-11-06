@@ -1,0 +1,10 @@
+{
+    "categories": ["Herr", "Dam", "Barn", "Baby", "Budget"],
+    "products": {
+        "1": {
+            "name": "Vit Tröja",
+            "price": 299,
+            "category": "herr"
+        }
+    }
+}

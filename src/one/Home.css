@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+}
+
+.col {
+  position: relative;
+}
+
+img {
+  height: 35vh;
+  object-fit: cover;
+}
+
+.img-big {
+  height: 10vh;
+  width: 30vh;
+  top: 35%;
+  font-size: 40px;
+  background-color: red;
+  margin-left: 10vh;
+}
+
+.img-small {
+  height: 10vh;
+  width: 30vh;
+  top: 35%;
+  font-size: 40px;
+  margin-left: 1vh;
+}
