@@ -1,17 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom' 
 import './Home.css';
-import { getSubdomain } from '../helpers'
-import herr from '../images/herr.jpg'
-import dam from '../images/dam.jpg'
-import barn from '../images/barn.jpg'
-import baby from '../images/baby.jpg'
-import budget from '../images/budget.jpg'
+import { importAll } from '../helpers'
 
 //Länkar borde gå till item/3 där item hämtar data från json fil och visar för det itemet
 //Måste spara skit i en varukorg med, får kolla på cookies
 
 function Home() {
   const navigate = useNavigate();
+  const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
 
   const toItems=(category)=>{
     navigate('/category',{state:{category:category, name:'sabaoon'}});
@@ -24,13 +20,13 @@ function Home() {
           <div class="row mb-4">
             <div class="col">
               <Link to='/herr'>
-                <img src={herr} class='w-100 shadow rounded'/>
+                <img src={images["herr.jpg"]} class='w-100 shadow rounded'/>
                 <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-big'>Herr</h1>
               </Link>
             </div>
             <div class='col'>
               <Link to='/category'>
-                <img src={dam} class='w-100 shadow rounded'/>
+                <img src={images["dam.jpg"]} class='w-100 shadow rounded'/>
                 <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-big'>Dam</h1>
               </Link>
             </div>
@@ -38,19 +34,19 @@ function Home() {
           <div class='row align-items-center'>
             <div class="col">
               <Link to='/category'>
-                <img src={barn} class='w-100 shadow rounded'/>
+                <img src={images["barn.jpg"]} class='w-100 shadow rounded'/>
                 <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-small'>Barn</h1>
               </Link>
             </div>
             <div class='col'>
               <Link to='/category'>
-                <img src={baby} class='w-100 shadow rounded'/>
+                <img src={images["baby.jpg"]} class='w-100 shadow rounded'/>
                 <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-small'>Baby</h1>
               </Link>
             </div>
             <div class='col'>
               <Link to='/category'>
-                <img src={budget} class='w-100 shadow rounded'/>
+                <img src={images["budget.jpg"]} class='w-100 shadow rounded'/>
                 <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-small'>Budget</h1>
               </Link>
             </div>

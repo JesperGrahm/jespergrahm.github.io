@@ -8,7 +8,7 @@ function CategoryNavbar(props) {
   let data = props.data
   return (
     <div>
-      <ListGroup className='col-2 p-4'>
+      <ListGroup className='shadow' style={{width: '18vh'}}>
         {data.map(category => (
           <NavLink to={'/' + category.toLowerCase() } style={{ textDecoration: 'none' }}>
             <ListGroup.Item className={"text-center p-3" + 
