@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.58d3bb19.css",
-    "main.js": "/static/js/main.6b155288.js",
+    "main.css": "/static/css/main.abc5f5eb.css",
+    "main.js": "/static/js/main.23b10bad.js",
     "static/media/budget.jpg": "/static/media/budget.b3ac2a8aa0065622ede0.jpg",
     "static/media/herr.jpg": "/static/media/herr.6b9eef870093a2bcf946.jpg",
     "static/media/bluetshirt.jpg": "/static/media/bluetshirt.5a590f4744d7fda17d8a.jpg",
+    "static/media/cart.png": "/static/media/cart.0edb59010b1db3cbc904.png",
     "static/media/baby.jpg": "/static/media/baby.16c37de4af5cf588a90c.jpg",
     "static/media/whitetshirt.jpg": "/static/media/whitetshirt.ffdb78f85c3f4a887b9d.jpg",
     "static/media/barn.jpg": "/static/media/barn.6b1559fe1bd77340e1b0.jpg",
     "static/media/dam.jpg": "/static/media/dam.fe5164bee1dfb481c220.jpg",
     "index.html": "/index.html",
-    "main.58d3bb19.css.map": "/static/css/main.58d3bb19.css.map",
-    "main.6b155288.js.map": "/static/js/main.6b155288.js.map"
+    "main.abc5f5eb.css.map": "/static/css/main.abc5f5eb.css.map",
+    "main.23b10bad.js.map": "/static/js/main.23b10bad.js.map"
   },
   "entrypoints": [
-    "static/css/main.58d3bb19.css",
-    "static/js/main.6b155288.js"
+    "static/css/main.abc5f5eb.css",
+    "static/js/main.23b10bad.js"
   ]
 }
