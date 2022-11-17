@@ -1,14 +1,13 @@
-import {useLocation, useParams} from 'react-router-dom';
-import {useState} from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react'
 import { categories } from '../database'
 import './Product.css'
 import CategoryNavbar from '../CategoryNavbar.js'
-import { getProductsInCategory, importAll, getProduct } from '../helpers'
-import {Button, Dropdown, DropdownButton, Form} from 'react-bootstrap';
+import { importAll, getProduct } from '../helpers'
+import { Button, Form } from 'react-bootstrap';
 
 function Product() {
-  const [cart, setCart] = useState([]);
-  const location = useLocation();
+  const [ isAlertVisible, setIsAlertVisible ] = useState(false);
   const { product } = useParams();
   const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
   const productData = getProduct(product);
@@ -25,11 +24,11 @@ function Product() {
   function addToCart() {
     if (size != '' && amount != '') {
       var cart = JSON.parse(localStorage.getItem('cart'))
-      var itemToBeAdded = {"name": productData.name, "size": size, "amount": amount}
+      var itemToBeAdded = {"data": productData, "size": size, "amount": amount}
       var itemAdded = false;
       for(let i = 0; i < cart.length; i++) {
         let item = cart[i];
-        if (item.name == productData.name && item.size == size) {
+        if (item.data.name == productData.name && item.size == size) {
           item.amount = item.amount + amount;
           itemAdded = true;
           break;
@@ -39,19 +38,22 @@ function Product() {
         cart.push(itemToBeAdded)
       }
       localStorage.setItem('cart', JSON.stringify(cart))
+      setIsAlertVisible(true);
+      setTimeout(() => { setIsAlertVisible(false); }, 2000);
       console.log('added to cart '+localStorage.getItem('cart'))
     } else {
       console.log("Size and/or amount not set. Item not added to cart.")
     }
   };
-  function clearCart() {
-    localStorage.setItem('cart', JSON.stringify([]))
-    console.log("Cart cleared.")
-  }
 
   return (
     <body className='d-flex flex-column align-items-center'>
-        <h1 className='display-1 p-4'>Applikation</h1>
+        <div class='d-flex'>
+          <Link to='/' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
+          <Link to='/cart' class='d-table m-auto ms-4'>
+            <img src={images['cart.png']} class='cartIcon p-1' />
+          </Link>
+        </div>
         <div className='container h-75 d-flex'>
             <CategoryNavbar data={categories} />
             <div class='w-100 d-flex'>
@@ -62,12 +64,12 @@ function Product() {
                   <div class='w-75 d-flex'>
                   <Form.Select onChange={choice => {setSize(choice.target.value);}}>
                     <option hidden>Storlek</option>
-                    <option value="xs">XS</option>
-                    <option value="s">S</option>
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                    <option value="xxl">XXL</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </ Form.Select>
                   <span class='p-2'></span>
                   <Form.Select onChange={choice => {setAmount(choice.target.value);}}>
@@ -79,8 +81,9 @@ function Product() {
                     <option value="5">5</option>
                   </ Form.Select>
                   </div>
-                  <div class='mt-4 pt-4'>
+                  <div class='d-flex mt-4 pt-4'>
                     <Button size='lg' onClick={addToCart}>Lägg i varukorg</Button>
+                    {isAlertVisible && <p className='p-1 ms-2 fw-bold'>Produkt tillagd i varukorgen</p>}
                   </div>
                 </div>
             </div>

@@ -1,21 +1,18 @@
-import { Link, useNavigate } from 'react-router-dom' 
+import { Link } from 'react-router-dom' 
 import './Home.css';
 import { importAll } from '../helpers'
 
-//Länkar borde gå till item/3 där item hämtar data från json fil och visar för det itemet
-//Måste spara skit i en varukorg med, får kolla på cookies
-
 function Home() {
-  const navigate = useNavigate();
   const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
-
-  const toItems=(category)=>{
-    navigate('/category',{state:{category:category, name:'sabaoon'}});
-  }
 
   return (
     <body className='d-flex flex-column align-items-center'>
-        <h1 className='display-1 p-4'>Applikation</h1>
+        <div class='d-flex'>
+          <Link to='/' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
+          <Link to='/cart' class='d-table m-auto ms-4'>
+            <img src={images['cart.png']} class='cartIcon p-1' />
+          </Link>
+        </div>
         <div className='container h-75'>
           <div class="row mb-4">
             <div class="col">
