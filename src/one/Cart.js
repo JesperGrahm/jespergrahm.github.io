@@ -1,12 +1,18 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { importAll } from '../helpers';
 import './Cart.css';
 import { Button } from 'react-bootstrap';
 
 function Cart() {
-
+    
+    const [value, setValue] = useState(0);
     const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
     var cart = JSON.parse(localStorage.getItem('cart'));
+    if (cart === null) {
+        localStorage.setItem('cart', JSON.stringify([]))
+        cart = JSON.parse(localStorage.getItem('cart'))
+    }
 
     function removeItem(name, size) {
         var cart = JSON.parse(localStorage.getItem('cart'))
@@ -19,13 +25,15 @@ function Cart() {
         }
         localStorage.setItem('cart', JSON.stringify(cart))
         console.log('Removed item from cart ')
-        window.location.reload()
+        //Used to re-render component
+        setValue(value + 1)
     }
 
     function clearCart() {
         localStorage.setItem('cart', JSON.stringify([]))
         console.log("Cart cleared.")
-        window.location.reload()
+        //Used to re-render component
+        setValue(value + 1)
     }
 
     return (

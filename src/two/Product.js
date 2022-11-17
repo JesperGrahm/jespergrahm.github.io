@@ -24,6 +24,10 @@ function Product() {
   function addToCart() {
     if (size != '' && amount != '') {
       var cart = JSON.parse(localStorage.getItem('cart'))
+      if (cart === null) {
+        localStorage.setItem('cart', JSON.stringify([]))
+        cart = JSON.parse(localStorage.getItem('cart'))
+      }
       var itemToBeAdded = {"data": productData, "size": size, "amount": amount}
       var itemAdded = false;
       for(let i = 0; i < cart.length; i++) {
