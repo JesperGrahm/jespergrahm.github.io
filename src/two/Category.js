@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { categories } from '../database'
 import './Category.css'
 import CategoryNavbar from '../CategoryNavbar.js'
-import { getCategory, getProductsInCategory, importAll, getVersion } from '../helpers'
+import { getCategory, getProductsInCategory, importAll } from '../helpers'
 
 function Category() {
   const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
@@ -11,8 +11,8 @@ function Category() {
   return (
     <body className='d-flex flex-column align-items-center'>
         <div class='d-flex'>
-            <Link to='/one' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
-            <Link to='/one/cart' class='d-table m-auto ms-4'>
+            <Link to='/two' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
+            <Link to='/two/cart' class='d-table m-auto ms-4'>
             <img src={images['cart.png']} class='cartIcon p-1' />
           </Link>
         </div>
@@ -21,7 +21,7 @@ function Category() {
             <div class='productContainer d-flex'>
                 {getProductsInCategory(getCategory()).map(product => (
                     <div class='product'>
-                        <Link to={'/one/' + product.category + '/' + product.id}>
+                        <Link to={'/two/' + product.category + '/' + product.id}>
                             <img src={images[product.img_path]} class='shadow'/>
                         </Link>
                         <h5 class='pt-3'>{product.name}: {product.price} kr</h5> 

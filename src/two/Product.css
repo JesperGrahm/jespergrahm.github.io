@@ -1,0 +1,10 @@
+.productImg {
+    height: 50vh;
+    width: 50vh;
+}
+.cartIcon {
+    height: 6vh;
+    width: 6vh;
+    border: 3px solid black;
+    border-radius: 5px;
+}

@@ -1,0 +1,14 @@
+.productContainer {
+    width: 80%;
+    flex-wrap: wrap;
+    padding-left: 3vh;
+    align-content: flex-start;
+}
+img {
+    width: 30vh;
+    height: 30vh;
+}
+.product {
+    padding-left: 3vh;
+    padding-bottom: 3vh;
+}

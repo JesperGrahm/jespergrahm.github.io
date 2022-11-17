@@ -1,23 +1,25 @@
 import React from "react";
-import { BrowserRouter, Route, Link, NavLink } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import { Link, Outlet } from "react-router-dom";
 import ListGroup from 'react-bootstrap/ListGroup';
-import { ListGroupItem } from "react-bootstrap";
+import { getVersion } from './helpers';
 
 function CategoryNavbar(props) {
   let data = props.data
+  const isActive = true;
   return (
     <div>
       <ListGroup className='shadow' style={{width: '18vh'}}>
         {data.map(category => (
-          <NavLink to={'/' + category.toLowerCase() } style={{ textDecoration: 'none' }}>
+          <Link to={'/' + getVersion() + '/' + category.toLowerCase() }
+                    style={{ textDecoration: 'none' }}>
             <ListGroup.Item className={"text-center p-3" + 
-            ( window.location.href.split('/')[3] == category.toLowerCase() ? " bg-primary" : "")}>
+            ( window.location.href.split('/')[4] == category.toLowerCase() ? " bg-primary" : "")}>
               { category }
             </ListGroup.Item>
-          </NavLink>
+          </Link>
         ))}
       </ListGroup>
+      <Outlet />
     </div>
   );
 }

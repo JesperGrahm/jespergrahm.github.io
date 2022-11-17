@@ -31,8 +31,8 @@ function Cart() {
     return (
         <body className='d-flex flex-column align-items-center'>
             <div className='d-flex'>
-                <Link to='/one/' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
-                <Link to='/one/cart' class='d-table m-auto ms-4'>
+                <Link to='/two/' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
+                <Link to='/two/cart' class='d-table m-auto ms-4'>
                     <img src={images['cart.png']} className='cartIcon p-1' />
                 </Link>
             </div>

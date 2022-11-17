@@ -26,4 +26,12 @@ function importAll(r) {
     return images;
   }
 
-export { getProductsInCategory, importAll, getProduct };
+function getCategory() {
+    return window.location.pathname.split('/').at(-1)
+}
+
+function getVersion() {
+    return window.location.pathname.split('/')[1]
+}
+
+export { getProductsInCategory, importAll, getProduct, getCategory, getVersion };

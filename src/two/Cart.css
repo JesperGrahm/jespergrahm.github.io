@@ -1,0 +1,10 @@
+.itemImg {
+    height: 15vh;
+    width: 15vh;
+}
+.cartItemsContainer {
+    width: 40%;
+}
+.removeItem {
+    height: 6vh;
+}
