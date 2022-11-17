@@ -5,7 +5,14 @@ export const products = [
         "name": "Vit T-shirt",
         "price": 299,
         "category": "herr",
-        "img_path": "whitetshirt.jpg"
+        "img_path": "whitetshirt.jpg",
+        "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id mi mattis,"+
+                "feugiat purus ac, luctus turpis. Fusce eget arcu blandit, auctor justo ullamcorper,"+
+                " auctor mi. Donec dictum sollicitudin justo, vel consequat odio pulvinar sit amet. "+
+                "Suspendisse sit amet turpis a tortor pharetra tempor quis ac massa. Donec ac elementum"+
+                " libero. Vivamus interdum pharetra tellus, ac pretium mauris sodales aliquet. Sed metus"+
+                " augue, cursus non tincidunt nec, euismod sit amet dui. In lacinia libero dui, lacinia "+
+                "cursus sem egestas et. Donec a commodo turpis."
     },
     {
         "id": 2,

@@ -1,7 +1,4 @@
-img {
-    width: 50vh;
+.productImg {
     height: 50vh;
-}
-.productContainer {
-    width: 100%;
+    width: 50vh;
 }
