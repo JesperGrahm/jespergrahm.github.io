@@ -1,0 +1,16 @@
+.belowBox {
+    margin-right: 25em;
+}
+.aboveBox {
+    margin-right: 17.5em;
+}
+.alertBox {
+    margin-left: 15em;
+    margin-top: -20em;
+    border: 5px solid black;
+}
+.alertBox2 {
+    margin-left: -18em;
+    margin-top: -10em;
+    border: 5px solid black;
+}

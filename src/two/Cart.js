@@ -14,11 +14,11 @@ function Cart() {
         cart = JSON.parse(localStorage.getItem('cart'))
     }
 
-    function removeItem(name, size) {
+    function removeItem(name, size, color) {
         var cart = JSON.parse(localStorage.getItem('cart'))
         for(let i = 0; i < cart.length; i++) {
             let item = cart[i];
-            if (item.data.name == name && item.size == size) {
+            if (item.data.name == name && item.size == size && item.color == color) {
               cart.splice(i, 1)
               break;
             }
@@ -52,11 +52,12 @@ function Cart() {
                             <div className='ms-auto pe-4'>
                                 <p className='m-1 fw-bold'>Produkt: {item.data.name}</p>
                                 <p className='m-1 fw-bold'>Storlek: {item.size}</p>
+                                <p className='m-1 fw-bold'>Färg: {item.color}</p>
                                 <p className='m-1 fw-bold'>Antal: {item.amount}</p>
                                 <p className='m-1 fw-bold'>Totalt pris: {parseInt(item.amount)*parseInt(item.data.price)} kr</p>
                             </div>
                             <Button className='removeItem btn-danger m-auto' 
-                                    onClick={() => removeItem(item.data.name, item.size)}>
+                                    onClick={() => removeItem(item.data.name, item.size, item.color)}>
                                     Ta bort produkt
                             </Button>
                         </div>
