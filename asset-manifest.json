@@ -1,21 +1,46 @@
 {
   "files": {
     "main.css": "/static/css/main.2583d0e6.css",
-    "main.js": "/static/js/main.f80eade8.js",
+    "main.js": "/static/js/main.f8879937.js",
     "static/media/budget.jpg": "/static/media/budget.b3ac2a8aa0065622ede0.jpg",
+    "static/media/womanblouse.jpg": "/static/media/womanblouse.d6e497e42109e163abf3.jpg",
+    "static/media/childoverall.jpg": "/static/media/childoverall.29fc81229f6aa4c37135.jpg",
+    "static/media/childsocks.jpg": "/static/media/childsocks.c20681cd17b7361384f6.jpg",
+    "static/media/tophat.jpg": "/static/media/tophat.dd92f8da1d9dcc6d1555.jpg",
     "static/media/herr.jpg": "/static/media/herr.6b9eef870093a2bcf946.jpg",
+    "static/media/babybody.jpg": "/static/media/babybody.0a64aed9bb45307dea4b.jpg",
+    "static/media/manpants.jpg": "/static/media/manpants.eb1c2ee891f0b1ea87d5.jpg",
+    "static/media/avocado.jpg": "/static/media/avocado.47f25cd5f5d68ddfd3bd.jpg",
+    "static/media/womansocks.jpg": "/static/media/womansocks.6153a3ad1f11ebddfca3.jpg",
+    "static/media/budgetsocks.jpg": "/static/media/budgetsocks.17ed34e2a170dd807a3b.jpg",
     "static/media/bluetshirt.jpg": "/static/media/bluetshirt.5a590f4744d7fda17d8a.jpg",
+    "static/media/duckytie.jpg": "/static/media/duckytie.f55e11c823dffc992d48.jpg",
+    "static/media/childpants.jpg": "/static/media/childpants.8c0c81e6bfab7cec6133.jpg",
+    "static/media/childshirt.jpg": "/static/media/childshirt.3e326bba95aef73553ad.jpg",
+    "static/media/womandress.jpg": "/static/media/womandress.f73c75079b69adf12262.jpg",
+    "static/media/womanpanties.jpg": "/static/media/womanpanties.4fa3cb01d4cc783b6e2a.jpg",
+    "static/media/childjacket.jpg": "/static/media/childjacket.f565a446b835b24d6f8a.jpg",
     "static/media/cart.png": "/static/media/cart.0edb59010b1db3cbc904.png",
+    "static/media/babysocks.jpg": "/static/media/babysocks.debada65593f7701424c.jpg",
+    "static/media/budgetchristmas.jpg": "/static/media/budgetchristmas.b68b48dc8f22d7e60695.jpg",
+    "static/media/button.jpg": "/static/media/button.baf46d51e38b5433ac36.jpg",
     "static/media/baby.jpg": "/static/media/baby.16c37de4af5cf588a90c.jpg",
-    "static/media/whitetshirt.jpg": "/static/media/whitetshirt.ffdb78f85c3f4a887b9d.jpg",
+    "static/media/budgetshirt.jpg": "/static/media/budgetshirt.b1cf5c2e6d024f7aa0e2.jpg",
+    "static/media/mantshirt.jpg": "/static/media/mantshirt.ffdb78f85c3f4a887b9d.jpg",
+    "static/media/babyoverall.jpg": "/static/media/babyoverall.c20d3e4a892abf9d4c40.jpg",
     "static/media/barn.jpg": "/static/media/barn.6b1559fe1bd77340e1b0.jpg",
+    "static/media/womanpants.jpg": "/static/media/womanpants.f0d826bc095648aeca8e.jpg",
+    "static/media/manunderwear.jpg": "/static/media/manunderwear.0ffd473b5cd7ec269d35.jpg",
+    "static/media/babydress.jpg": "/static/media/babydress.494d872f707b38171608.jpg",
+    "static/media/mansocks.jpg": "/static/media/mansocks.1c5a56d43b2195e123ad.jpg",
+    "static/media/babyset.jpg": "/static/media/babyset.3d66b13fa3c5a34b634d.jpg",
     "static/media/dam.jpg": "/static/media/dam.fe5164bee1dfb481c220.jpg",
     "index.html": "/index.html",
     "main.2583d0e6.css.map": "/static/css/main.2583d0e6.css.map",
-    "main.f80eade8.js.map": "/static/js/main.f80eade8.js.map"
+    "main.f8879937.js.map": "/static/js/main.f8879937.js.map"
   },
   "entrypoints": [
     "static/css/main.2583d0e6.css",
-    "static/js/main.f80eade8.js"
+    "static/js/main.f8879937.js"
   ]
 }
