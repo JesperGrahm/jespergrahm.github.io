@@ -13,6 +13,7 @@ function Product() {
   const productData = getProduct(product);
   var size = '';
   var amount = 0;
+  var color = '';
   function setSize(value) {
     size = value;
     console.log("size: "+value)
@@ -21,18 +22,22 @@ function Product() {
     amount = parseInt(value);
     console.log("amount: "+value)
   };
+  function setColor(value) {
+    color = value;
+    console.log("color: "+value)
+  };
   function addToCart() {
-    if (size != '' && amount != '') {
+    if (size != '' && amount != 0 && color != '') {
       var cart = JSON.parse(localStorage.getItem('cart'))
       if (cart === null) {
         localStorage.setItem('cart', JSON.stringify([]))
         cart = JSON.parse(localStorage.getItem('cart'))
       }
-      var itemToBeAdded = {"data": productData, "size": size, "amount": amount}
+      var itemToBeAdded = {"data": productData, "size": size, "amount": amount, "color": color}
       var itemAdded = false;
       for(let i = 0; i < cart.length; i++) {
         let item = cart[i];
-        if (item.data.name == productData.name && item.size == size) {
+        if (item.data.name == productData.name && item.size == size && item.color == color) {
           item.amount = item.amount + amount;
           itemAdded = true;
           break;
@@ -46,15 +51,15 @@ function Product() {
       setTimeout(() => { setIsAlertVisible(false); }, 2000);
       console.log('added to cart '+localStorage.getItem('cart'))
     } else {
-      console.log("Size and/or amount not set. Item not added to cart.")
+      console.log("Size and/or amount and/or color not set. Item not added to cart.")
     }
   };
 
   return (
     <body className='d-flex flex-column align-items-center'>
         <div class='d-flex'>
-          <Link to='/one' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
-          <Link to='/one/cart' class='d-table m-auto ms-4'>
+          <Link to='/two' className='display-1 m-4 text-decoration-none text-dark'>Webshop</Link>
+          <Link to='/two/cart' class='d-table m-auto ms-4'>
             <img src={images['cart.png']} class='cartIcon p-1' />
           </Link>
         </div>
@@ -76,18 +81,29 @@ function Product() {
                     <option value="XXL">XXL</option>
                   </ Form.Select>
                   <span class='p-2'></span>
-                  <Form.Select onChange={choice => {setAmount(choice.target.value);}}>
-                    <option hidden>Antal</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                  <Form.Select onChange={choice => {setColor(choice.target.value);}}>
+                    <option hidden>Färg</option>
+                    <option value="Vit">Vit</option>
+                    <option value="Svart">Svart</option>
+                    <option value="Blå">Blå</option>
+                    <option value="Grön">Grön</option>
+                    <option value="Röd">Röd</option>
                   </ Form.Select>
+                  <span class='p-2'></span>
                   </div>
                   <div class='d-flex mt-4 pt-4'>
+                    <div class='w-25 pe-4'>
+                      <Form.Select onChange={choice => {setAmount(choice.target.value);}}>
+                        <option hidden>Antal</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </ Form.Select>
+                    </div>
                     <Button size='lg' onClick={addToCart}>Lägg i varukorg</Button>
-                    {isAlertVisible && <p className='p-1 ms-2 fw-bold'>Produkt tillagd i varukorgen</p>}
+                    {isAlertVisible && <p className='ms-1 fw-bold h-25'>Produkt tillagd i varukorgen</p>}
                   </div>
                 </div>
             </div>

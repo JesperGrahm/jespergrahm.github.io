@@ -104,7 +104,7 @@ function Product6() {
                                 <option value="5">5</option>
                             </ Form.Select>
                             </div>
-                            <Button size='lg' className='ms-4 bg-primary' onClick={addToCart}>Fortsätt handla</Button>
+                            <Button size='lg' className='ms-4 bg-primary' onClick={addToCart}>Lägg i varukorg</Button>
                         </div>
                             
                         </div>}

@@ -18,13 +18,13 @@ function Home() {
             <div class="col">
               <Link to='/one/herr'>
                 <img src={images["herr.jpg"]} class='categoryImg w-100 shadow rounded'/>
-                <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-big'>Herr</h1>
+                <h1 class='carousel-caption bg-light border border-dark bg-opacity-75 text-dark img-big'>Herr</h1>
               </Link>
             </div>
             <div class='col'>
               <Link to='/one/dam'>
                 <img src={images["dam.jpg"]} class='categoryImg w-100 shadow rounded'/>
-                <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-big'>Dam</h1>
+                <h1 class='carousel-caption bg-light border border-dark bg-opacity-75 text-dark img-big'>Dam</h1>
               </Link>
             </div>
           </div>
@@ -32,19 +32,19 @@ function Home() {
             <div class="col">
               <Link to='/one/barn'>
                 <img src={images["barn.jpg"]} class='categoryImg w-100 shadow rounded'/>
-                <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-small'>Barn</h1>
+                <h1 class='carousel-caption bg-light border border-dark bg-opacity-75 text-dark img-small'>Barn</h1>
               </Link>
             </div>
             <div class='col'>
               <Link to='/one/baby'>
                 <img src={images["baby.jpg"]} class='categoryImg w-100 shadow rounded'/>
-                <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-small'>Baby</h1>
+                <h1 class='carousel-caption bg-light border border-dark bg-opacity-75 text-dark img-small'>Baby</h1>
               </Link>
             </div>
             <div class='col'>
               <Link to='/one/budget'>
                 <img src={images["budget.jpg"]} class='categoryImg w-100 shadow rounded'/>
-                <h1 class='carousel-caption bg-secondary bg-opacity-75 text-dark img-small'>Budget</h1>
+                <h1 class='carousel-caption bg-light border border-dark bg-opacity-75 text-dark img-small'>Budget</h1>
               </Link>
             </div>
           </div>
